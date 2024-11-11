@@ -30,6 +30,58 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        var menuData;
+        // read the data.json file and print it to the console
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // extract keys from data
+                menuData = Object.keys(data);
+
+                // render menuData in tab
+                var menuTab = document.getElementById('menu-tab-id');
+                for (var i = 0; i < menuData.length; i++) {
+                    // append as child to menu-tab-id
+                    myHtml = `
+                    <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 ${i == 0 ? 'active' : ''}" data-bs-toggle="pill" href="#tab-${i+1}">
+                                <!-- <i class="fa fa-coffee fa-2x text-primary"></i> -->
+                                <div class="ps-3">
+                                    <!-- <small class="text-body">Veg</small> -->
+                                    <h6 class="mt-n1 mb-0">${menuData[i]}</h6>
+                                </div>
+                            </a>
+                        </li>`;
+                    menuTab.innerHTML += myHtml;
+                }
+
+                // render tab details
+                var tabDetails = document.getElementById('menu-tab-content');
+                for (var i = 0; i < menuData.length; i++) {
+                    // append as child to tab-details, add active class to first tab
+                    myHtml = `
+                    <div id="tab-${i+1}" class="tab-pane fade show p-0 ${i == 0 ? 'active' : ''}">
+                        <div class="row g-4">
+                            ${data[menuData[i]].map(item => `
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>${item.item_name}</span>
+                                                <span class="text-primary">${item.item_price}</span>
+                                            </h5>
+                                            <small class="fst-italic">${item.item_description}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>`;
+                    tabDetails.innerHTML += myHtml;
+                }
+            });
+    </script>
 </head>
 
 <body>
@@ -87,623 +139,14 @@
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
                     <!-- <h1 class="mb-5">Most Popular Items</h1> -->
+                     <hr>
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Veg</small>
-                                    <h6 class="mt-n1 mb-0">Appetizer</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-hamburger fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Non Veg</small>
-                                    <h6 class="mt-n1 mb-0">Appetizer</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Tandoori</small>
-                                    <h6 class="mt-n1 mb-0">Grill</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Veg</small>
-                                    <h6 class="mt-n1 mb-0">Curry</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-5">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Non Veg</small>
-                                    <h6 class="mt-n1 mb-0">Curry</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-6">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
-                                <div class="ps-3">
-                                    <small class="text-body">Breads</small>
-                                    <h6 class="mt-n1 mb-0">Roti/Naan</h6>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Onion Pakoda</span>
-                                                <span class="text-primary">$8.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Onion, gram flour, rice flour, ginger, chilli, mixed and deep fried in oil</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Bajji</span>
-                                                <span class="text-primary">$8.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Gram flour mixed with rice flour, chilli powder and green chilli is deep fried with batter</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Cut Mirchi</span>
-                                                <span class="text-primary">$8.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Gram flour mixed with rice flour, chilli powder and green chilli is deep fried with batter.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Samosa</span>
-                                                <span class="text-primary">$5.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Savory pastries filled with peas and spiced potatoes</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Gobi 65</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Cauliflower deep fried with batter and curry leaves</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Gobi Manchurian</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                cauliflower deep fried with batter and sauteed with bell pepper and onions</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Crispy Sweetcorn Fry</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Sweetcorn deep fried with batter and sauteed with onions</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Baby Corn Manchurian</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Crispy babycorn tossed with onions and capsicum in soya chilli sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chilli Gobi</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Fried gobi tossed with onions and capsicum in soya chilli sauce
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chilli Babycorn</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Babycorn tossed with tomato sauce, soya sauce and spring onion is added to garnish
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chilli Paneer</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Paneer deep fried with batter and sauteed with bell pepper, manchurian sauce
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Paneer 65</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Made by marinating paneer in flour and spices batter then deep frying it until crispy and golden.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Veg Ball Manchurian</span>
-                                                <span class="text-primary">$11.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Crisp fried vegetable balls are dunked in slightly sweet, sour and hot Manchurian sauce.
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken 65</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Boneless chicken marinated in a spicy masala and deep fried
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chilli Chicken</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Marinated battered fried chicken sauteed with onions and bell pepper in sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Manchurian</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Marinated battered fried chicken sauteed with onions and spring onion in tomato manchuria sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Madras Chicken Pepper Fry (B/L)</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Marinated fried chicken sauteed with onions and pepper and other herb spices
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Konaseema Ghee Roast Chicken</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Bone-in chicken deep fried and pan fried with ghee and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Goat Sukka</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Goat cubes cooked and pan fried with sukka masala and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Lamb Sukka</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Lamb cubes cooked and pan fried with sukka masala and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chilli Fish</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Tilapia boneless fish friend and sauteed with chilli sauce, herbs and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Apollo Fish</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Marinated fish fried and cooked with yogurt, chilli and herbal spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Royyala Fry (Shrimp Fry)</span>
-                                                <span class="text-primary">$14.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Shrimp cooked and sauteed with onions and home spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-3" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Tandoori Chicken</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Chicken Leg Quarters marinated in yogurt with special herbs,spices and cooked in tandoor</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Tikka</span>
-                                                <span class="text-primary">$16.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Tender boneless chicken cubes marinated in yogurt and mild spices and grilled in clay oven</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Paneer Tikka</span>
-                                                <span class="text-primary">$15.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Paneer marinated in a spiced yogurt-based marinade, arranged on skewers and grilled in the oven</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Tandoori Shrimp</span>
-                                                <span class="text-primary">$16.99</span>
-                                            </h5>
-                                            <small class="fst-italic">Tandoori prawns are marinated in spiced yoghurt and cooked over tandoor till crisp golden.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-4" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Dal Thadka (South Indian)</span>
-                                                <span class="text-primary">$12.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Yellow lentils cooked to perfection over fire infused with tempered herbs and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Butter Paneer</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Paneer cubes cooked in a rich creamy indian sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Dhaba Style Methi Chaman Paneer</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Paneer cooked in indian sauce containing cashew, methi leaves and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Mix Veg Curry</span>
-                                                <span class="text-primary">$12.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Mixed vegetables cooked in a special sauce containing all spices
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-5" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Egg Pulusu</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Boiled eggs cooked with onions and tomatoes with tamarind juice and spices
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Curry</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Boneless chicken pieces slow cooked in south indian spices in rich onion sauce</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Harayali</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Boneless chicken slow cooked in mint flavoured south indian rich onion and spices</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chicken Korma</span>
-                                                <span class="text-primary">$13.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Boneless chicken cooked in an aromatic sauce containing cashew, coconut and cream with spices
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-6" class="tab-pane fade show p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Plain Naan</span>
-                                                <span class="text-primary">$3.49</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Soft leavened white bread cooked in clay oven
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Butter Naan</span>
-                                                <span class="text-primary">$3.49</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Soft leavened white bread cooked in clay oven with butter on top
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Garlic Naan</span>
-                                                <span class="text-primary">$4.49</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Soft leavened white bread with garlic and cilantro cooked in clay oven
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Bullet Naan</span>
-                                                <span class="text-primary">$4.49</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Soft leavened white bread with jalapeños and cilantro cooked in clay oven
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Chapathi ( 2Pcs )</span>
-                                                <span class="text-primary">$2.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Whole wheat bread cooked on Tawa
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="d-flex align-items-center">
-                                        <!-- <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;"> -->
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Malabar Parotta ( 2Pcs )</span>
-                                                <span class="text-primary">$4.99</span>
-                                            </h5>
-                                            <small class="fst-italic">
-                                                Parotta or flat bread made with maida like subcontinental layered pan cake
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <!-- Menu tab HTML -->
+                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5" id="menu-tab-id"></ul>
+
+                    <div class="tab-content" id="menu-tab-content">
                     </div>
                 </div>
             </div>
