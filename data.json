@@ -613,5 +613,27 @@
       "item_description": "Coffee powder, Sugar, Hot milk",
       "item_price": "$3.99"
     }
+  ],
+  "Dosas": [
+    {
+      "item_name": "Plain Dosa",
+      "item_description": "Thin Rice & lentil crepe",
+      "item_price": "$9.99"
+    },
+    {
+      "item_name": "Schezwan Dosa",
+      "item_description": "A thin rice crepe stuffed with spring vegetables and South Indian spiced mashed potatoes, topped with a drizzle of Schezwan sauce.",
+      "item_price": "$14.49"
+    },
+    {
+      "item_name": "Masala Dosa",
+      "item_description": "A thin rice and lentil crepe stuffed with spiced mashed potatoes and onions.",
+      "item_price": "$12.49"
+    },
+    {
+      "item_name": "Ghee Mysore Masala Dosa",
+      "item_description": "A thin rice and lentil crepe spread with red chili chutney, filled with spiced mashed potatoes and onions, and finished with a sprinkle of ghee.",
+      "item_price": "$15.99"
+    }
   ]
 }
