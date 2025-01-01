@@ -52,10 +52,11 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-N23WXQX3');</script>
     <!-- End Google Tag Manager -->
+
     <script>
         var menuData;
         // read the data.json file and print it to the console
-        fetch('data.json')
+        fetch('catering.json')
             .then(response => response.json())
             .then(data => {
                 // extract keys from data
@@ -126,8 +127,8 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Aroma Of India</h1> -->
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
                     <img src="img/logo_cropped.png" alt="Logo" style="max-height: 150px !important; transition: .5s; margin-top: 10px !important; margin-bottom: 10px !important;">
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -137,8 +138,8 @@
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
-                        <a href="menu.html" class="nav-item nav-link active">Menu</a>
-                        <a href="catering.html" class="nav-item nav-link">Catering</a>
+                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <a href="catering.html" class="nav-item nav-link active">Catering</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="https://aroma-of-india-1742.helcim.app/quick-order" class="btn btn-primary py-2 px-4" target="_blank">ORDER ONLINE</a>
@@ -147,12 +148,12 @@
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Food Menu</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Catering</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
-                            <li class="breadcrumb-item text-white active" aria-current="page">Menu</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Catering</li>
                         </ol>
                     </nav>
                 </div>
@@ -160,15 +161,18 @@
         </div>
         <!-- Navbar & Hero End -->
 
+        <!-- <div class="container">
+            <img src="img/catering.jpg" alt="Catering" style="width: 100%; height: auto;" />
+        </div> -->
 
         <!-- Menu Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                    <!-- <h1 class="mb-5">Most Popular Items</h1> -->
+                <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Catering Menu</h5>
+                    <h1 class="mb-5">Most Popular Items</h1>
                      <hr>
-                </div>
+                </div> -->
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     
                     <!-- Menu tab HTML -->
@@ -180,7 +184,6 @@
             </div>
         </div>
         <!-- Menu End -->
-        
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">

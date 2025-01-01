@@ -1,0 +1,66 @@
+{
+  "Full Trays (20\" * 12\")": [
+    {
+      "item_name": "Vegetarian Biryanis",
+      "item_description": "Any one of the following Biranis - Soya Cashew Biryani, Paneer Vijaywada Biryani, Paneer Special Biryani, Paneer 65 Biryani, Mushroom Biryani, Egg Vijayawada Biryani, Egg 65 Biryani, Chilli Egg Biryani",
+      "item_price": "$140.00"
+    },
+    {
+      "item_name": "Vegetarian Curries",
+      "item_description": "Any one of the following Curries - Dal Thadka, Butter Paneer, Methi Chaman Paneer, Mixed Vegetable Curry, Paneer Tikka Masala, Palak Paneer, Eggplant Curry, Kaju Soya Masala, Malai Kofta",
+      "item_price": "$140.00"
+    },
+    {
+      "item_name": "Chicken Biryanis",
+      "item_description": "Any one of the following Biranis - Chicken Vijayawada Biryani,, Chicken Fry Piece Biryani, Hyderabadi Chicken Dum Biryani, Special Butter Chicken Biryani, Special Chicken Mughalai Biryani, Chicken 65 Biryani",
+      "item_price": "$160.00"
+    },
+    {
+      "item_name": "Non-Veg Curries",
+      "item_description": "Any one of the following Curries - Chicken Curry, Chicken Harayali, Chicken Korma, Chicken Tikka Masala, Kadai Chicken, Butter Chicken, Chicken Chettinad, Chicken Vindaloo, Goat Curry, Goat Chettinad, Goat Vindaloo, Keema Matar Curry, Lamb Korma, Lamb Chettinad, Lamb Rogan Josh, Lamb Pasand, Malabar Shrimp Masala, Fish Pulusu, Fish 65",
+      "item_price": "$160.00"
+    },
+    {
+      "item_name": "Sea Food Biryanis",
+      "item_description": "Any one of the following Biranis - Fish Special Biryani, Fish Gongura Biryani, Fish Vijayawada Biryani, Fish 65 Biryani, Shrimp Special Biryani, Shrimp Gongura Biryani",
+      "item_price": "$180.00"
+    },
+    {
+      "item_name": "Goat/Lamb Biryanis",
+      "item_description": "Any one of the following Biranis - Goat Vijayawada Biryani, Goat Fry Biryani,, Lamb Fry Biryani, Lamb Vijayawada Biryani, Lamb 65 Biryani",
+      "item_price": "$190.00"
+    }
+  ],
+  "Half Trays (12\" * 10\")": [
+    {
+      "item_name": "Vegetarian Biryanis",
+      "item_description": "Any one of the following Biranis - Soya Cashew Biryani, Paneer Vijaywada Biryani, Paneer Special Biryani, Paneer 65 Biryani, Mushroom Biryani, Egg Vijayawada Biryani, Egg 65 Biryani, Chilli Egg Biryani",
+      "item_price": "$75.00"
+    },
+    {
+      "item_name": "Vegetarian Curries",
+      "item_description": "Any one of the following Curries - Dal Thadka, Butter Paneer, Methi Chaman Paneer, Mixed Vegetable Curry, Paneer Tikka Masala, Palak Paneer, Eggplant Curry, Kaju Soya Masala, Malai Kofta",
+      "item_price": "$75.00"
+    },
+    {
+      "item_name": "Chicken Biryanis",
+      "item_description": "Any one of the following Biranis - Chicken Vijayawada Biryani,, Chicken Fry Piece Biryani, Hyderabadi Chicken Dum Biryani, Special Butter Chicken Biryani, Special Chicken Mughalai Biryani, Chicken 65 Biryani",
+      "item_price": "$85.00"
+    },
+    {
+      "item_name": "Non-Veg Curries",
+      "item_description": "Any one of the following Curries - Chicken Curry, Chicken Harayali, Chicken Korma, Chicken Tikka Masala, Kadai Chicken, Butter Chicken, Chicken Chettinad, Chicken Vindaloo, Goat Curry, Goat Chettinad, Goat Vindaloo, Keema Matar Curry, Lamb Korma, Lamb Chettinad, Lamb Rogan Josh, Lamb Pasand, Malabar Shrimp Masala, Fish Pulusu, Fish 65",
+      "item_price": "$85.00"
+    },
+    {
+      "item_name": "Sea Food Biryanis",
+      "item_description": "Any one of the following Biranis - Fish Special Biryani, Fish Gongura Biryani, Fish Vijayawada Biryani, Fish 65 Biryani, Shrimp Special Biryani, Shrimp Gongura Biryani",
+      "item_price": "$85.00"
+    },
+    {
+      "item_name": "Goat/Lamb Biryanis",
+      "item_description": "Any one of the following Biranis - Goat Vijayawada Biryani, Goat Fry Biryani,, Lamb Fry Biryani, Lamb Vijayawada Biryani, Lamb 65 Biryani",
+      "item_price": "$95.00"
+    }
+  ]
+}
