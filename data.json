@@ -21,6 +21,11 @@
       "item_price": "$5.99"
     },
     {
+      "item_name": "Samosa Chaat",
+      "item_description": "Tangy and spicy Samosa Chaat is popular north Indian street food! Crunchy samosa is served with spicy chickpea curry (chole), yogurt and chutneys!",
+      "item_price": "$7.99"
+    },
+    {
       "item_name": "Gobi 65",
       "item_description": "Cauliflower deep fried with batter and curry leaves",
       "item_price": "$11.99"
@@ -58,12 +63,42 @@
     {
       "item_name": "Paneer 65",
       "item_description": "Made by marinating paneer in flour and spices batter then deep frying it until crispy and golden",
-      "item_price": "$11.99"
+      "item_price": "$12.99"
     },
     {
       "item_name": "Veg Ball Manchurian",
       "item_description": "Crisp fried vegetable balls are dunked in slightly sweet, sour and hot Manchurian sauce",
       "item_price": "$11.99"
+    },
+    {
+      "item_name": "Dahi Puri",
+      "item_description": "Dahi Puri is a crunchy, savory dish packed with layers of tangy, sweet, and spicy flavors",
+      "item_price": "$7.99"
+    },
+    {
+      "item_name": "Gol gappa (pani puri)",
+      "item_description": "Deep-fried crispy flatbread spheres (puris) filled with a savory mixture of spiced mashed potatoes, chickpeas, and sometimes onions, then submerged in or drizzled with a flavorful, spiced water (pani) and often topped with chutney",
+      "item_price": "$7.99"
+    },
+    {
+      "item_name": "Chaat papdi",
+      "item_description": "Papdi chaat is a Indian chaat snack made with crisp fried puris, sweet sour spicy chutneys & sev.",
+      "item_price": "$7.99"
+    },
+    {
+      "item_name": "Mini Dahi Bhalla",
+      "item_description": "Dahi Bhalla is a tasty fast food snack made up of curd soaked lentil fritters topped with spicy & sweet chutneys, papdi, chickpeas",
+      "item_price": "$7.99"
+    },
+    {
+      "item_name": "Pav Bhaji",
+      "item_description": "Pav Bhaji is a flavorsome and hearty meal that has a delicious blend of spicy mixed vegetables, served alongside soft butter toasted dinner rolls",
+      "item_price": "$9.99"
+    },
+    {
+      "item_name": "Aloo Tikki Chaat",
+      "item_description": "Aloo Tikki Chaat recipe is a spicy, tangy and super delicious snack of crispy fried potato patties topped with chutneys, curd, chaat masala.",
+      "item_price": "$7.99"
     }
   ],
   "Non Veg Appetizer": [
@@ -80,6 +115,11 @@
     {
       "item_name": "Chicken Manchurian",
       "item_description": "Marinated battered fried chicken sauteed with onions and spring onion in tomato manchuria sauce",
+      "item_price": "$13.99"
+    },
+    {
+      "item_name": "Reshmi Malai Chicken Tikka",
+      "item_description": "Creamy grilled chicken malai kebabs marinated in fresh cream, mild spices and nuts.",
       "item_price": "$13.99"
     },
     {
@@ -110,7 +150,12 @@
     {
       "item_name": "Appollo Fish",
       "item_description": "Marinated fish fried and cooked with yogurt, chilli and herbal spices",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
+    },
+    {
+      "item_name": "Fish 65",
+      "item_description": "Super spicy and delicious fish 65 which taste so yummy. It is perfect as a appetizer for parties as well.",
+      "item_price": "$14.99"
     },
     {
       "item_name": "Royyala Fry (Shrimp Fry)",
@@ -132,7 +177,7 @@
     {
       "item_name": "Paneer Tikka",
       "item_description": "Paneer marinated in a spiced yogurt-based marinade, arranged on skewers and grilled in the oven",
-      "item_price": "$15.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Tandoori Shrimp",
@@ -142,24 +187,44 @@
   ],
   "Veg Curry": [
     {
+      "item_name": "Kheema Matar curry",
+      "item_description": "Keema Matar, also known as Qeema Matar, is a popular dish from the Indian subcontinent. It's essentially a curry made with green peas",
+      "item_price": "$16.99"
+    },
+    {
+      "item_name": "Shahi Paneer",
+      "item_description": "Shahi paneer is a rich and creamy Indian curry made with paneer (Indian cottage cheese) cooked in a gravy",
+      "item_price": "$13.99"
+    },
+    {
       "item_name": "Dal Thadka (South Indian)",
       "item_description": "Yellow lentils cooked to perfection over fire infused with tempered herbs and spices",
-      "item_price": "$12.99"
+      "item_price": "$13.99"
+    },
+    {
+      "item_name": "Dal Makhni",
+      "item_description": "Made primarily with whole black lentils (urad dal) and kidney beans (rajma), cooked in a creamy, buttery sauce",
+      "item_price": "$14.49"
     },
     {
       "item_name": "Butter Paneer",
       "item_description": "Paneer cubes cooked in a rich creamy indian sauce",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Dhaba Style Methi Chaman Paneer",
       "item_description": "Paneer cooked in indian sauce containing cashew, methi leaves and spices",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Mix Veg Curry",
       "item_description": "Mixed vegetables cooked in a special sauce containing all spices",
-      "item_price": "$12.99"
+      "item_price": "$13.99"
+    },
+    {
+      "item_name": "Aloo gobhi masala",
+      "item_description": "Potato and cauli-flower cooked in a special sauce containing all spices",
+      "item_price": "$14.99"
     },
     {
       "item_name": "Paneer Tikka Masala",
@@ -169,7 +234,7 @@
     {
       "item_name": "Palak Paneer",
       "item_description": "Paneer cooked in a rich creamy spinach puree",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Eggplant Curry (Guthi Vankaya Curry)",
@@ -184,14 +249,19 @@
     {
       "item_name": "Malai Kofta",
       "item_description": "Potato cheese balls cooked in rich creamy house made special sauce",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     }
   ],
   "Breads": [
     {
+      "item_name": "Tandoori Roti",
+      "item_description": "Soft leavened white bread cooked in clay oven",
+      "item_price": "$2.99"
+    },
+    {
       "item_name": "Plain Naan",
       "item_description": "Soft leavened white bread cooked in clay oven",
-      "item_price": "$3.49"
+      "item_price": "$3.99"
     },
     {
       "item_name": "Butter Naan",
@@ -204,9 +274,19 @@
       "item_price": "$4.49"
     },
     {
+      "item_name": "Cheese Naan",
+      "item_description": "Soft leavened white bread with cheese cooked in clay oven",
+      "item_price": "$6.99"
+    },
+     {
+      "item_name": "Aloo Parota",
+      "item_description": "Aloo paratha are popular North Indian whole wheat flabreads with a spiced potato filling.",
+      "item_price": "$6.99"
+    },
+    {
       "item_name": "Bullet Naan",
       "item_description": "Soft leavened white bread with jalapeños and cilantro cooked in clay oven",
-      "item_price": "$4.49"
+      "item_price": "$3.99"
     },
     {
       "item_name": "Chapathi ( 2Pcs )",
@@ -228,7 +308,7 @@
     {
       "item_name": "Chicken Curry",
       "item_description": "Boneless chicken pieces slow cooked in south indian spices in rich onion sauce",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Chicken Harayali",
@@ -241,6 +321,11 @@
       "item_price": "$13.99"
     },
     {
+      "item_name": "Chicken Fry",
+      "item_description": "Chicken Fry aka Kodi Vepudu is a popular Andhra restaurant style side where chicken is marinated and cooked until tender.",
+      "item_price": "$13.99"
+    },
+    {
       "item_name": "Chicken Tikka Masala",
       "item_description": "Boneless chicken breast cooked in clay oven and simmered in tomato sauce containing onions, methi and bell pepper",
       "item_price": "$14.99"
@@ -248,7 +333,7 @@
     {
       "item_name": "Kadai Chicken",
       "item_description": "Boneless chicken cooked with authentic kadai masala",
-      "item_price": "$13.99"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Butter Chicken",
@@ -263,7 +348,7 @@
     {
       "item_name": "Chicken Vindaloo",
       "item_description": "Chicken and potatoes sauteed in a spicy tangy sauce",
-      "item_price": "$13.99"
+      "item_price": "$15.99"
     },
     {
       "item_name": "Goat Curry",
@@ -273,7 +358,7 @@
     {
       "item_name": "Goat Chettinad",
       "item_description": "Slow cooked goat in authentic spices containing ginger, garlic and onions",
-      "item_price": "$15.99"
+      "item_price": "$16.99"
     },
     {
       "item_name": "Goat Vindaloo",
@@ -284,6 +369,16 @@
       "item_name": "Keema Matar Curry",
       "item_description": "Mutton mince curry with fresh green peas",
       "item_price": "$15.99"
+    },
+    {
+      "item_name": "Goat Korma",
+      "item_description": "Goat with Cashew nuts and aromatic spices and coconut cream",
+      "item_price": "$16.99"
+    },
+    {
+      "item_name": "Lamb Curry",
+      "item_description": "Lamb slow cooked in south indian spices in rich onion sauce",
+      "item_price": "$16.99"
     },
     {
       "item_name": "Lamb Korma",
@@ -308,7 +403,7 @@
     {
       "item_name": "Malabar Shrimp Masala",
       "item_description": "Shrimp cooked in coconut milk, cashew and tamarind paste with other spices",
-      "item_price": "$14.99"
+      "item_price": "$16.99"
     },
     {
       "item_name": "Fish Pulusu",
@@ -350,7 +445,7 @@
     {
       "item_name": "Paneer 65 Biryani",
       "item_description": "Paneer 65 served with our special spices and topped with long-grain biryani rice",
-      "item_price": "$14.99"
+      "item_price": "$15.99"
     },
     {
       "item_name": "Mushroom Biryani",
@@ -388,6 +483,11 @@
       "item_price": "$14.99"
     },
     {
+      "item_name": "Pachi Mirchi Chicken Biryani",
+      "item_description": "Boneless chicken sauteed with own pachi mirchi sauce topped with long grain biryani rice",
+      "item_price": "$15.99"
+    },
+    {
       "item_name": "Chicken Gongura Biryani",
       "item_description": "Boneless chicken sauteed with house made sauce containing gongura leaves and topped with long grain biryani rice",
       "item_price": "$15.99"
@@ -403,9 +503,14 @@
       "item_price": "$14.99"
     },
     {
+      "item_name": "Special Butter Chicken Biryani",
+      "item_description": "Bone-in chicken pieces sauteed in butter chicken sauce and topped with long grain biryani rice",
+      "item_price": "$15.99"
+    },
+    {
       "item_name": "Hyderabadi Chicken Dum Biryani",
       "item_description": "Dum cooked chicken biryani with marinated chicken and long grain biryani rice in layers",
-      "item_price": "$14.99"
+      "item_price": "$16.99"
     },
     {
       "item_name": "Special Butter Chicken Biryani",
@@ -420,7 +525,7 @@
     {
       "item_name": "Chicken 65 Biryani",
       "item_description": "Chicken 65 served with our special spices and topped with long-grain biryani rice",
-      "item_price": "$14.99"
+      "item_price": "$15.99"
     },
     {
       "item_name": "Chilli Chicken Biryani",
@@ -440,12 +545,17 @@
     {
       "item_name": "Shrimp Special Biryani",
       "item_description": "Shrimp sauteed with own special sauce topped with long grain biryani rice",
-      "item_price": "$14.99"
+      "item_price": "$16.99"
     },
     {
       "item_name": "Shrimp Gongura Biryani",
       "item_description": "Shrimp sauteed with sauce containing gongura leaves and topped with long grain biryani rice",
       "item_price": "$14.99"
+    },
+    {
+      "item_name": "Goat Dum Biryani",
+      "item_description": "Dum cooked Goat biryani with marinated goat and long grain biryani rice in layers",
+      "item_price": "$17.99"
     },
     {
       "item_name": "Goat Vijayawada Biryani",
@@ -473,14 +583,19 @@
       "item_price": "$16.99"
     },
     {
+      "item_name": "Lamb Dum Biryani",
+      "item_description": "Dum cooked Lamb biryani with marinated lamb and long grain biryani rice in layers",
+      "item_price": "$17.99"
+    },
+    {
       "item_name": "Lamb Fry Biryani",
       "item_description": "Lamb pieces sauteed in yogurt and our special sauce and topped with long grain biryani rice",
-      "item_price": "$16.99"
+      "item_price": "$17.99"
     },
     {
       "item_name": "Lamb Vijayawada Biryani",
       "item_description": "Lamb is sauteed with own special sauce topped with long grain biryani rice",
-      "item_price": "$16.99"
+      "item_price": "$17.99"
     },
     {
       "item_name": "Lamb Ulavacharu Biryani",
@@ -495,7 +610,7 @@
     {
       "item_name": "Fish 65 Biryani",
       "item_description": "Fish 65 served with our special spices and topped with long-grain biryani rice",
-      "item_price": "$15.99"
+      "item_price": "$16.99"
     },
     {
       "item_name": "Fish Vijayawada Biryani",
@@ -540,6 +655,26 @@
       "item_price": "$14.99"
     },
     {
+      "item_name": "Triple Schezwan Fried Rice",
+      "item_description": "Triple Schezwan Fried Rice is a lip smacking complete meal with combination of Rice, Hakka Noodles and Crispy Fried Noodles , which is served with spicy and fragrant schezwan gravy.",
+      "item_price": "$14.99"
+    },
+     {
+      "item_name": "Schezwan Veg Noodles",
+      "item_description": "Al dente cooked noodles tossed in a hot, spicy and tangy schezwan sauce.",
+      "item_price": "$13.99"
+    },
+    {
+      "item_name": "Schezwan Chicken Noodles",
+      "item_description": "Al dente cooked noodles tossed in a hot, spicy and tangy schezwan sauce and chicken",
+      "item_price": "$14.99"
+    },
+    {
+      "item_name": "Chicken Noodles",
+      "item_description": "Al dente cooked noodles tossed in a hot, spicy and tangy schezwan sauce and chicken",
+      "item_price": "$14.99"
+    },
+    {
       "item_name": "Shrimp Fried Rice",
       "item_description": "Stir frying cooked rice in a wok with shrimp, vegeta- bles, sauces and eggs",
       "item_price": "$14.99"
@@ -551,6 +686,11 @@
     }
   ],
   "Deserts": [
+    {
+      "item_name": "Badmash Faluda",
+      "item_description": "Decadent and generously loaded version of the Indian dessert drink, Falooda",
+      "item_price": "$8.99"
+    },
     {
       "item_name": "Basundi",
       "item_description": "Thickened & sweetened milk that is flavored with spices & garnished with nuts",
@@ -616,6 +756,16 @@
   ],
   "Dosas": [
     {
+      "item_name": "Idly Sambar",
+      "item_description": "A quintessential South Indian breakfast, the Idli and served with lentil soup",
+      "item_price": "$9.99"
+    },
+    {
+      "item_name": "Idly Vada Combo (2pcs)",
+      "item_description": "A quintessential South Indian breakfast, the Idli and Vada combo offers a harmonious blend of soft, steamed rice cakes and crispy, savory lentil fritters",
+      "item_price": "$12.99"
+    },
+    {
       "item_name": "Plain Dosa",
       "item_description": "Thin Rice & lentil crepe",
       "item_price": "$9.99"
@@ -623,17 +773,27 @@
     {
       "item_name": "Schezwan Dosa",
       "item_description": "A thin rice crepe stuffed with spring vegetables and South Indian spiced mashed potatoes, topped with a drizzle of Schezwan sauce.",
-      "item_price": "$14.49"
+      "item_price": "$14.99"
     },
     {
       "item_name": "Masala Dosa",
       "item_description": "A thin rice and lentil crepe stuffed with spiced mashed potatoes and onions.",
-      "item_price": "$12.49"
+      "item_price": "$12.99"
+    },
+    {
+      "item_name": "Onion Dosa",
+      "item_description": "A thin rice and lentil crepe stuffed with onions.",
+      "item_price": "$11.99"
+    },
+    {
+      "item_name": "Uthappam",
+      "item_description": "It's a popular breakfast item made from a fermented batter of rice and lentils, similar to the batter used for dosa and idli.",
+      "item_price": "$13.99"
     },
     {
       "item_name": "Ghee Mysore Masala Dosa",
       "item_description": "A thin rice and lentil crepe spread with red chili chutney, filled with spiced mashed potatoes and onions, and finished with a sprinkle of ghee.",
-      "item_price": "$15.99"
+      "item_price": "$14.99"
     }
   ]
 }
